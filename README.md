@@ -2,7 +2,6 @@
 
 Another Clash Kernel.
 
-
 ## Features
 
 - Local HTTP/HTTPS/SOCKS server with authentication support
@@ -18,8 +17,6 @@ Another Clash Kernel.
 ## Dashboard
 
 A web dashboard with first-class support for this project has been created; it can be checked out at [clash-meta-dashboard](https://github.com/devsolux/clash-meta-dashboard).
-
-
 
 ## For development
 
@@ -58,23 +55,3 @@ iptables:
   enable: true # default is false
   inbound-interface: eth0 # detect the inbound interface, default is 'lo'
 ```
-
-## Debugging
-
-Check [wiki](https://wiki.metacubex.one/api/#debug) to get an instruction on using debug
-API.
-
-## Credits
-
-- [Dreamacro/clash](https://github.com/devsolux/clash-meta)
-- [SagerNet/sing-box](https://github.com/SagerNet/sing-box)
-- [riobard/go-shadowsocks2](https://github.com/riobard/go-shadowsocks2)
-- [v2ray/v2ray-core](https://github.com/v2ray/v2ray-core)
-- [WireGuard/wireguard-go](https://github.com/WireGuard/wireguard-go)
-- [yaling888/clash-plus-pro](https://github.com/yaling888/clash)
-
-## License
-
-This software is released under the GPL-3.0 license.
-
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FDreamacro%2Fclash.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FDreamacro%2Fclash?ref=badge_large)
