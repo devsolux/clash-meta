@@ -249,7 +249,7 @@ jobs:
       - name: Delete current release assets
         uses: 8Mi-Tech/delete-release-assets-action@main
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.TOKEN }}
           tag: Prerelease-${{ github.ref_name }}
           deleteOnlyFromDrafts: false
 
@@ -263,7 +263,7 @@ jobs:
         with:
           tag_name: Prerelease-${{ github.ref_name }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
 
       - run: |
           cat > release.txt << 'EOF'
@@ -275,6 +275,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         if: ${{  success() }}
         with:
+          token: ${{ secrets.TOKEN }}
           tag_name: Prerelease-${{ github.ref_name }}
           files: |
             bin/*
@@ -301,6 +302,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         if: ${{  success() }}
         with:
+          token: ${{ secrets.TOKEN }}
           tag_name: ${{ github.ref_name }}
           files: bin/*
           generate_release_notes: true
